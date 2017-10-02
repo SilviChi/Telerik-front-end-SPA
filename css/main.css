@@ -1,0 +1,34 @@
+/* Reset */
+html, body, div, span, object, 
+h1, h2, h3, h4, h5, h6, p, 
+a, em, img, strong, center,
+ol, ul, li, fieldset, form, label, legend,
+article, aside, footer, header,
+menu, nav, section {
+	margin: 0;
+	padding: 0;
+	border: 0;
+	font-size: 100%;
+	font: inherit;
+	vertical-align: baseline;
+	background: transparent;
+}
+/* HTML5 display-role reset for older browsers */
+article, aside, details, footer,
+header,  menu, nav, section {
+	display: block;
+}
+body {
+	line-height: 1;
+}
+ol, ul {
+	list-style: none;
+}
+/* Main Styles */
+html {
+	background: url('../images/bg.png');
+}
+.container {
+	max-width: 960px;
+	background: grey;
+}
