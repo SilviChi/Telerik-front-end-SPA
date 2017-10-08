@@ -23,6 +23,7 @@
   "dependencies": {
     "bootstrap": "^4.0.0-beta",
     "firebase": "^4.4.0",
+    "gulp": "^3.9.1",
     "handlebars": "^4.0.10",
     "jquery": "^3.2.1",
     "sammy": "^0.7.6",

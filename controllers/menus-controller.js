@@ -1,21 +1,26 @@
+import MenusDAO from 'menus-dao'
+import Templates from 'templates'
 
 class MenusController {
-	
-	getThreeArticlesRecommandations() {
-		let recommandations;
-		// announModel.getItems().then((res) => {
-		// 	items = res;
-		// 	items.homes = items.homes.splice(items.homes.length - 3);
-		// 	items.cars = items.cars.splice(items.cars.length - 3);
-		// 	items.pets = items.pets.splice(items.pets.length - 3);
-		// 	return templates.load('home');
-		// }).then((templateHTML) => {
-		// 	let template = Handlebars.compile(templateHTML);
-		// 	$('#main').html(template({
-		// 		items
-		// 	}));
-		// 	eventImageAnnoun.event();
-		// });
+	constructor() {
+		this.dao = new MenusDAO();
+	}
+
+	chefsRecommendations() {
+		this.dao.getAll()
+		.then((items) => {
+			items = items.filter((item) => {
+				return item.recommended;
+			});
+			new Templates('recommendations')
+				.show('.section1', {
+					items : [items[0], items[1], items[2]]
+				});
+		}).catch(error => {
+			console.log(error);
+			let code = error.code;
+			let message = error.message;
+		});
 	}
 }
 

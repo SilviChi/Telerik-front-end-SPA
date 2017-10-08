@@ -1,10 +1,45 @@
-<ul class="slider">
-{{#items}}
-		<li>
-			<h1>{{title}}</h1>
-			<p>{{description}}
+<div class="shadow-top"></div>
+<!-- Posts carousel-holder -->
+<div class="carousel-holder" id="">
+	<div class="slider">
+		{{#each items}}
+		<div class="item {{#if @first}}active{{else}}inactive{{/if}}">
+			<h1 class="title-post">{{this.title}}</h1>
+			<p>{{this.description}}
 			</p>
-			<a class="btn btn-primary" href="#">Button's Text Goes Right Here</a>
-		</li>
-{{/items}}
-</ul>
+		</div>
+		{{/each}}
+		<button class="readmore"><span>Read more...</span></button>
+	</div>
+
+
+	<div class="container-radio">
+		<div class="radio">
+			<input type="radio" name="reader" id="post0" checked onClick="changePost(0)">
+			<label for="article"></label>
+			<input type="radio" name="reader" id="post1" onClick="changePost(1)">
+			<label for="article"></label>
+			<input type="radio" name="reader" id="post2" onClick="changePost(2)">
+			<label for="article"></label>
+			<input type="radio" name="reader" id="post3" onClick="changePost(3)">
+			<label for="article"></label>
+			<input type="radio" name="reader" id="post4" onClick="changePost(4)">
+			<label for="article"></label>
+			<input type="radio" name="reader" id="post5" onClick="changePost(5)">
+			<label for="article"></label>
+		</div>
+	</div>
+	<script>
+		function changePost(index) {
+			console.log(index);
+//			for (var i=0; i < 6; i++) {
+//				$('input#post' + i).prop("checked", false);				
+//			}
+//			$('input#post' + index).prop("checked", true);
+			$('div.active').removeClass('active').addClass('inactive')
+			$('div.item')[index].removeClass('inactive').addClass('active');
+		}
+	</script>
+</div>
+<!-- END Carousel holder -->
+<div class="shadow-bottom"></div>

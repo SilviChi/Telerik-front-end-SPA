@@ -1,0 +1,18 @@
+<!-- class="home-block" -->
+<h2 class="title-font">CHEF'S RECOMMENDATIONS</h2>
+<div class="menu_items">
+	{{#items}}
+	<div class="item">
+		<div class="thumb">
+			<div class="shadow">
+				<img src="{{img}}"
+				 class="item-image" width="56" height="56" data-id="">
+			</div>
+		</div>
+		<div class="item-descr">
+			<h4 class="title"><a href="#">{{title}}</a></h4>
+			<p>{{description}}</p>
+		</div>
+	</div>
+	{{/items}}	
+</div>

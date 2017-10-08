@@ -24,11 +24,486 @@ body {
 ol, ul {
 	list-style: none;
 }
+
 /* Main Styles */
-html {
-	background: url('../images/bg.png');
+@font-face {
+    font-family: LeagueGothic;
+    src: url('../fonts/LeagueGothic-Regular.otf');
 }
-.container {
+@font-face {
+    font-family: GeorgiaItalic;
+    src: url('../fonts/Georgia_Italic.ttf');
+}
+@font-face {
+    font-family: Goudy;
+    src: url('../fonts/goudy_bookletter_1911.otf');
+}
+body {
+	background: url('../images/bg.png');
+	font-family: Georgia, serif;
+}
+
+/* Navigation */
+#nav {
+	width: 1180px;
+	left: 220px;
+	top: 25px;
+	background: url('../images/nav-backgr.png');
+	position: absolute;
+	max-height: 65px;
+}
+
+#nav ul#menu-nav{
+	margin-left: 290px;
+}
+/* #nav li {
+display: inline;
+padding-right: 10px;
+} */
+
+#nav li a {
+	color: white;
+	font-size: 12px;
+	font-family: Georgia, serif;
+	line-height: 18px;
+}
+#nav li a:hover {
+	color: #dbd3ad;
+	font-family: GeorgiaItalic;
+}
+
+.navbar > li > a.nav-link{
+	color: white;
+}
+
+/* Navigation End */
+
+/* Header */
+
+.wrapper-top {
+	background-color:#452917 ;
+	width: 1400px;
+	
+}
+.inactive {
+	display: none;
+}
+.active {
+	display: block;
+}
+/* .shadow-botton {
+	background: url('../images/home/shadow-botton.png')no-repeat bottom center;
+	background-color: red;
+    height: 10px;
+} */
+.shadow-top {
+    background: url('../images/home/shadow-top.png')no-repeat bottom center;
+    height: 11px;
+    margin: 0;
+}
+
+.carousel-holder {
 	max-width: 960px;
-	background: grey;
+	margin-top: 120px;
+	margin-left: 220px;
+	padding-left: 20px;
+}
+
+.slider {
+	max-width: 365px;
+	display: flex;
+	flex-direction: column;
+}
+.slider h1.title-post {
+	font-size: 48px;
+	padding-bottom: 17px;
+	text-transform: uppercase;
+	color: white;
+	font-family: LeagueGothic;
+}
+.slider p {
+	color: #fff;
+	text-shadow: 1px 1px 1px rgba(0, 0, 0, 0.1);
+	font-size: 14px;
+	font-family: Helvetica, Arial, sans-serif;
+	font-weight: bold;
+}
+
+.slider button.readmore {
+	width: 300px;
+	height: 35px;
+	padding-right: 50px;
+	background: url('../images/home/readmore-btn.png') no-repeat;
+	
+
+    color: #fff;
+    font-size: 16px;
+    font-family: Georgia, serif;
+    font-weight: normal;
+    border: transparent;
+    text-shadow: 1px 1px 1px rgba(0, 0, 0, 0.6);
+}
+.slider p {
+	margin-bottom: 17px;
+}
+.container-radio {
+	display: flex;	
+	height: 95px;
+	background: url('../images/home/carousel-bg.png') no-repeat bottom center;
+}
+.radio {
+	padding-top: 70px;
+	margin: auto;
+	
+}
+.bottom-line {
+	position:relative;
+	left: 75px;
+	bottom: 116px;
+	background: url('../images/home/carousel-bottom-line.png') no-repeat bottom center;
+	height: 3px;
+}
+input[type=radio] {
+    display: none;
+}
+
+label {
+    display: inline-block;
+    cursor: pointer;
+    position: relative;
+    padding-left: 5px;
+    margin-right: 13px;
+    font-size: 13px;
+}
+label:before {
+    content: "";
+    display: inline-block;
+
+    width: 16px;
+    height: 16px;
+
+    margin-right: 10px;
+    position: absolute;
+    left: 0;
+    bottom: 1px;
+    background-color:#EAE8CF;
+    box-shadow: inset 0 2px 3px 0 rgba(0, 0, 0, .3), 0 1px 0 0 rgba(255, 255, 255, .8);
+}
+.radio label:before {
+    border-radius: 8px;
+}
+input[type=radio]:checked + label:before {
+    content: "\2022";
+    color: #60533F;
+    font-size: 40px;
+    text-align: center;
+    line-height: 12px;
+}
+
+/* SLOGAN */
+
+.slogan {
+	width: 1400px;
+	background: url('../images/home/slogan-backgr.png') no-repeat bottom center ;
+	text-align: center;
+	display: flex;
+	flex-direction: column;
+	}
+
+.radio-line {
+	background: url('../images/home/carousel-bottom-bg.png') no-repeat center ;
+}
+
+.slogan h2 {
+	margin-top: 35px;
+	font-family: Goudy;
+	font-size: 24px;
+    color: #654e2d;
+    text-shadow: 1px 1px 1px #ffffff;
+
+}
+.slogan h3 {
+	color: #b4a48d;
+	font-family: 'Goudy Bookletter 1911', serif;
+	font-size: 14px;
+	text-shadow: 1px 1px 1px #ffffff;
+	text-transform: uppercase;
+	line-height:20px;
+}
+
+
+.slogan img {
+	margin: auto;
+	padding-bottom:17px;
+	padding-top: 17px;
+}
+.slogan-shadow {
+	background: url('../images/home/shadow-down.png') no-repeat bottom center ;
+    height: 3px;
+}
+/* Sections */
+
+.featured {
+	max-width: 960px;
+	margin-top: 60px;
+	margin-left: 220px;
+	margin-bottom: 80px;
+	display: flex;
+	flex-direction: row;
+}
+
+/* SECTION 1 */
+
+.featured .section1 {
+	width: 260px;
+	margin-right: 90px;
+	display: flex;
+	flex-direction: column;
+}
+
+.menu_items {
+	display: flex;
+	flex-direction: column;
+}
+.menu_items .item {
+	display: flex;
+	margin-bottom: 15px;
+}
+.menu_items .item-descr {
+	margin-left: 12px;
+	width: 178px;
+
+}
+
+.section1 .thumb {
+	background: url('../images/home/fr-cl.png') no-repeat;
+	width: 70px;
+	height: 70px;
+
+}
+.section1 .thumb img {
+	margin-left: 5.5px;
+	margin-top: 6px;
+}
+
+/* .section1 .thumb .shadow {
+	box-shadow:  inset 2px 2px 3px 0 rgba(0, 0, 0, .3), 0 1px 0 0 rgba(255, 255, 255, .8);
+} */
+
+.title-font {
+	margin-bottom: 18px;
+	
+	color: #cac6a1;
+	text-shadow: 1px 1px 1px #ffffff;
+	text-transform: uppercase;
+	font-family: LeagueGothic;
+	font-size: 22px;
+	line-height: 36px;
+}
+a:hover {
+    text-decoration: none;
+}
+
+.item-descr h4.title a{
+	font-family: LeagueGothic;
+	font-size: 22px;
+	color: #442917;
+}
+
+.item-descr p {
+	color: #92907c;
+	line-height: 20px;
+	font-size:12px;
+	font-family: GeorgiaItalic;
+}
+/* SECTION2 */
+
+.featured .section2 {
+	width: 260px;
+	margin-right: 90px;
+
+	display: flex;
+	flex-direction: column;
+}
+
+.gmaps-border {
+    padding: 5px;
+    border: 1px solid #e5e2c6;
+    width: 260px;
+    height: 180px;
+    background: #fff;
+    box-shadow: 1px 1px 1px #fff;
+    margin-bottom: 10px;
+}
+
+.section2 .thumb {
+	margin-bottom: 12px;
+	font-family: Georgia, serif;
+	font-size: 14px;
+	color: #92907c;
+}
+
+.worktime {
+	display: flex;
+}
+
+.work_hours_text {
+	font-size: 14px;
+	color: #442917;
+	line-height: 6px;
+}
+
+.work_days {
+	color: #cac6a1;
+	text-shadow: 1px 1px 1px #ffffff;
+	text-transform: uppercase;
+	font-family: LeagueGothic;
+	font-size: 16px;
+	margin-right: 8px;
+}
+
+.mon-fr .work_hours_text {
+	margin-right: 8px;
+}
+/* SECTION3 */
+
+.featured .section3 {
+	width: 260px;
+	display: flex;
+	flex-direction: column;
+
+}
+.com-bottom{
+    background: url('../images/home/com-botton.png') no-repeat bottom left;
+
+    padding-bottom: 26px;
+    border-bottom: 1px #e5e2c6;
+    border-radius: 10px;
+
+}
+.com-container{
+	height: 225px;
+	
+    background: url('../images/home/com.png') repeat-y;
+    width: 100%;
+    
+    padding-top: 9px;
+    border-top: 1px #e5e2c6;
+    border-radius: 10px;
+}
+
+.comment-wrap {
+	display: flex;
+}
+
+.section3 .item-descr {
+	display: flex;
+	flex-direction: column;
+}
+.section3 .author {
+	margin-top: 14px;
+
+}
+
+.section3 .thumb {
+	background: url('../images/home/fr-cl.png') no-repeat;
+	width: 70px;
+	height: 70px;
+	margin: 12px;
+
+	padding-right:12px;
+}
+
+.com-container .second-paragr {
+	width: 210px;
+	margin-left: 18px;
+	color: #999785;
+	text-align: justify;
+	line-height: 20px;
+	font-size:12px;
+	font-family: GeorgiaItalic;
+}
+.short-comment {
+	text-align: justify;
+	color: #92907c;
+	line-height: 20px;
+	font-size:12px;
+	font-family: GeorgiaItalic;
+	margin-top: 10px;
+}
+.section3 .thumb img {
+	margin-left: 5.5px;
+	margin-top: 6px;
+}
+
+.section3 .item-descr h4 {
+	font-family: LeagueGothic;
+	font-size: 22px;
+	color: #442917;
+}
+
+/* FOOTER */
+
+bottom-line-2 {
+	position:relative;
+	left: 75px;
+	background: url('../images/home/carousel-bottom-line.png') no-repeat bottom center;
+	height: 3px;
+}
+
+footer {
+	width: 1400px;
+	background: url('../images/home/footer.png') no-repeat ;
+	display: flex;
+	flex-direction: column;
+}
+
+footer .menu {
+	display: flex;
+	padding-top: 20px;
+	margin: auto;
+}
+
+footer .bottom-btn {
+	background: url('../images/button-d.png') no-repeat center;
+	border: transparent;
+	height: 35px;
+	margin-top: -15px;
+	
+}
+
+footer .bottom-btn a {
+	color: white;
+	font-family: Georgia, serif;;
+}
+
+footer .symbol-logo {
+	margin: auto;
+	margin-top: 15px;
+}
+
+.menu li a {
+	margin-right: 15px;
+	color: #442917;
+	font-size: 12px;
+	font-family: Georgia, serif;
+	line-height: 18px;
+}
+
+.menu li a:hover {
+	color: #92907c;
+	font-family: GeorgiaItalic;
+
+}
+
+footer p {
+	margin: auto;
+	padding-top: 25px;
+	font-family: GeorgiaItalic;
+	font-size: 12px;
+	color: #92907c;
+}
+
+footer span {
+	color: #696751;
 }

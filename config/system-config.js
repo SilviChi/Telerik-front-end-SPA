@@ -15,9 +15,13 @@ System.config({
         'firebase': '../config/firebase.js',
         'menus-controller': '../controllers/menus-controller.js',
         'main-controller': '../controllers/main-controller.js',
+        'location-controller': '../controllers/location-controller.js',
         'posts-controller': '../controllers/posts-controller.js',
+        'reviews-controller': '../controllers/reviews-controller.js',
         'base-dao': '../models/base-dao',
         'posts-dao': '../models/posts-dao',
+        'menus-dao': '../models/menus-dao',
+        'reviews-dao': '../models/reviews-dao',
     },
     packages: {
         '/': {
