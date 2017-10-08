@@ -1,7 +1,6 @@
-import Templates from 'templates'
+import Templates from 'templates';
 
 class LocationController {
-
 	shortLocation() {
 		return new Templates('short-location')
 			.show('.section2', {});

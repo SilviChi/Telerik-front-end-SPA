@@ -1,5 +1,5 @@
-import MenusDAO from 'menus-dao'
-import Templates from 'templates'
+import MenusDAO from 'menus-dao';
+import Templates from 'templates';
 
 class MenusController {
 	constructor() {
@@ -14,12 +14,10 @@ class MenusController {
 			});
 			new Templates('recommendations')
 				.show('.section1', {
-					items : [items[0], items[1], items[2]]
+					items: [items[0], items[1], items[2]],
 				});
-		}).catch(error => {
+		}).catch((error) => {
 			console.log(error);
-			let code = error.code;
-			let message = error.message;
 		});
 	}
 }
