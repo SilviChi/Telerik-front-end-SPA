@@ -1,4 +1,4 @@
-import firebase from 'firebase';
+import firebase from 'db';
 
 class BaseDAO {
 	constructor(name) {
@@ -6,21 +6,21 @@ class BaseDAO {
 	}
 
 	getById(id) {
-		var self = this;
-		return new Promise(function (resolve) {
-			this.db.child(id).once('value').then(function (snapshot) {
+		const self = this;
+		return new Promise(function(resolve) {
+			self.db.child(id).once('value').then(function(snapshot) {
 				resolve(snapshot.val());
 			});
 		});
 	}
 
 	getAll() {
-		var self = this;
+		const self = this;
 		return new Promise((resolve, reject) => {
 			self.db.once('value')
-				.then(function (snapshot) {
-					var items = [];
-					snapshot.forEach(function (childSnapshot) {
+				.then(function(snapshot) {
+					const items = [];
+					snapshot.forEach(function(childSnapshot) {
 						items.push(childSnapshot.val());
 					});
 					resolve(items);

@@ -1,4 +1,4 @@
-import BaseDAO from 'base-dao'
+import BaseDAO from 'base-dao';
 
 class ReviewsDAO extends BaseDAO {
 	constructor() {

@@ -1,13 +1,11 @@
 import 'jquery';
 
-import Handlebars from 'handlebars';
-import LocationController from 'location-controller'
-import MainController from 'main-controller'
-import MenusController from 'menus-controller'
-import PostsController from 'posts-controller'
-import ReviewsController from 'reviews-controller'
+import LocationController from 'location-controller';
+import MainController from 'main-controller';
+import MenusController from 'menus-controller';
+import PostsController from 'posts-controller';
+import ReviewsController from 'reviews-controller';
 import Sammy from 'sammy';
-import templates from 'templates';
 
 const router = (function() {
     const menusController = new MenusController();
@@ -15,9 +13,9 @@ const router = (function() {
     const mainController = new MainController();
     const locationController = new LocationController();
     const reviewsController = new ReviewsController();
-    
+
     function start() {
-        let sammyApp = Sammy('#main', function() {
+        const sammyApp = new Sammy('#main', function() {
             this.get('/', function() {
                 this.redirect('#/');
             });
@@ -30,10 +28,10 @@ const router = (function() {
                     menusController.chefsRecommendations();
                     locationController.shortLocation();
                     reviewsController.randomReview();
-                })
+                });
             });
             this.get('#/posts/:id', function() {
-                var id = this.params.id;
+                const id = this.params.id;
                 mainController.showMain('post').then(() => {
                     postsController.showPost(id);
                 });
@@ -52,7 +50,7 @@ const router = (function() {
         sammyApp.run('#/home');
     }
     return {
-        start
+        start,
     };
 }());
 
