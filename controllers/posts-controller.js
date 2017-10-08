@@ -12,8 +12,8 @@ class PostsController {
 			.then((items) => {
 				console.log(items);
 				new Templates('posts')
-					.show('#carousel-holder', {
-						items
+					.show('#posts', {
+						items // : [items[0]]
 					});
 			}).catch(error => {
 				console.log(error);

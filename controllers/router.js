@@ -1,9 +1,11 @@
 import 'jquery';
 
 import Handlebars from 'handlebars';
+import LocationController from 'location-controller'
 import MainController from 'main-controller'
 import MenusController from 'menus-controller'
 import PostsController from 'posts-controller'
+import ReviewsController from 'reviews-controller'
 import Sammy from 'sammy';
 import templates from 'templates';
 
@@ -11,7 +13,9 @@ const router = (function() {
     const menusController = new MenusController();
     const postsController = new PostsController();
     const mainController = new MainController();
-
+    const locationController = new LocationController();
+    const reviewsController = new ReviewsController();
+    
     function start() {
         let sammyApp = Sammy('#main', function() {
             this.get('/', function() {
@@ -22,10 +26,10 @@ const router = (function() {
             });
             this.get('#/home', function() {
                 mainController.showMain('home').then(() => {
-                    // menusController.chefsRecommendations();
-                    // locationController.shortLocation();
-                    // reviewsController.getRandomReview();
                     postsController.getAllPosts();
+                    menusController.chefsRecommendations();
+                    locationController.shortLocation();
+                    reviewsController.randomReview();
                 })
             });
             this.get('#/posts/:id', function() {
