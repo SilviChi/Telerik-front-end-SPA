@@ -34,9 +34,10 @@
 	},
 	"reviews" : {
 		"1": {
-			"img": "https://i.pinimg.com/736x/d0/b1/c1/d0b1c100c871ee188bfb7e6357c61a38--profile-photography-white-photography.jpg",
-			"title": "Maria Kristi",
-			"description": "Lorem ipsum dolor sit amet, consetetur sadipscing elitr,/ sed diam nonumy eirmod tempor invidunt ut labore et dolore magna aliquyam erat,/ sed diam voluptua."
+			"img": "https://i.pinimg.com/736x/40/00/d7/4000d7ed061f540a0180b6181184686d--street-styles-cameras.jpg",
+			"name": "Irina",
+			"title": "Delicious food",
+			"description": "Upmarket spot overlooking the beach with views. Food was very tasty and lunches are quite reasonable."
 		}
 	}
 }

@@ -43,7 +43,9 @@ const router = (function() {
             });
             this.get('#/location', function() {
                 mainController.showMain('location').then(() => {
-                    // locationController.fullLocation();
+                    locationController.fullLocation();
+                    reviewsController.getRecentReviews();
+                    postsController.getAllPostsFooter();
                 });
             });
         });

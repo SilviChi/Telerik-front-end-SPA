@@ -28,7 +28,7 @@ ol, ul {
 /* Main Styles */
 @font-face {
     font-family: LeagueGothic;
-    src: url('../fonts/LeagueGothic-Regular.otf');
+    src: url('../fonts/LeagueGothic-Regular.otf') format('opentype');
 }
 @font-face {
     font-family: GeorgiaItalic;
@@ -38,6 +38,7 @@ ol, ul {
     font-family: Goudy;
     src: url('../fonts/goudy_bookletter_1911.otf');
 }
+
 body {
 	background: url('../images/bg.png');
 	font-family: Georgia, serif;
@@ -48,7 +49,7 @@ body {
 	width: 1180px;
 	left: 220px;
 	top: 25px;
-	background: url('../images/nav-backgr.png');
+	background: #989180;
 	position: absolute;
 	max-height: 65px;
 }
@@ -99,7 +100,6 @@ padding-right: 10px;
 .shadow-top {
     background: url('../images/home/shadow-top.png')no-repeat bottom center;
     height: 11px;
-    margin: 0;
 }
 
 .carousel-holder {
@@ -122,6 +122,9 @@ padding-right: 10px;
 	font-family: LeagueGothic;
 }
 .slider p {
+	height: 70px;
+	margin-bottom: 17px;
+	overflow: hidden;
 	color: #fff;
 	text-shadow: 1px 1px 1px rgba(0, 0, 0, 0.1);
 	font-size: 14px;
@@ -129,33 +132,36 @@ padding-right: 10px;
 	font-weight: bold;
 }
 
-.slider button.readmore {
+.slider a.readmore {
 	width: 300px;
 	height: 35px;
-	padding-right: 50px;
+	padding-top: 8px;
 	background: url('../images/home/readmore-btn.png') no-repeat;
 	
 
     color: #fff;
-    font-size: 16px;
+	font-size: 16px;
     font-family: Georgia, serif;
     font-weight: normal;
     border: transparent;
     text-shadow: 1px 1px 1px rgba(0, 0, 0, 0.6);
 }
-.slider p {
-	margin-bottom: 17px;
+
+.readmore span {
+	margin-left: 80px;
 }
+
 .container-radio {
+	background: url('../images/home/carousel-bg.png') no-repeat bottom center;
 	display: flex;	
 	height: 95px;
-	background: url('../images/home/carousel-bg.png') no-repeat bottom center;
 }
+
 .radio {
-	padding-top: 70px;
 	margin: auto;
-	
+	padding-top: 70px;
 }
+
 .bottom-line {
 	position:relative;
 	left: 75px;
@@ -343,14 +349,18 @@ a:hover {
 	color: #92907c;
 }
 
+.section2 iframe {
+	width: 250px;
+	height: 170px;
+}
 .worktime {
 	display: flex;
 }
 
-.work_hours_text {
+.work_hours {
 	font-size: 14px;
 	color: #442917;
-	line-height: 6px;
+
 }
 
 .work_days {
@@ -358,11 +368,11 @@ a:hover {
 	text-shadow: 1px 1px 1px #ffffff;
 	text-transform: uppercase;
 	font-family: LeagueGothic;
-	font-size: 16px;
+	font-size: 22px;
 	margin-right: 8px;
 }
 
-.mon-fr .work_hours_text {
+.mon-fr .work_hours {
 	margin-right: 8px;
 }
 /* SECTION3 */
@@ -452,16 +462,16 @@ bottom-line-2 {
 }
 
 footer {
-	width: 1400px;
 	background: url('../images/home/footer.png') no-repeat ;
 	display: flex;
 	flex-direction: column;
+	width: 1400px;
 }
 
 footer .menu {
 	display: flex;
-	padding-top: 20px;
 	margin: auto;
+	padding-top: 20px;
 }
 
 footer .bottom-btn {
@@ -483,11 +493,11 @@ footer .symbol-logo {
 }
 
 .menu li a {
-	margin-right: 15px;
 	color: #442917;
-	font-size: 12px;
 	font-family: Georgia, serif;
+	font-size: 12px;
 	line-height: 18px;
+	margin-right: 15px;
 }
 
 .menu li a:hover {
@@ -497,11 +507,11 @@ footer .symbol-logo {
 }
 
 footer p {
-	margin: auto;
-	padding-top: 25px;
+	color: #92907c;
 	font-family: GeorgiaItalic;
 	font-size: 12px;
-	color: #92907c;
+	margin: auto;
+	padding-top: 25px;
 }
 
 footer span {

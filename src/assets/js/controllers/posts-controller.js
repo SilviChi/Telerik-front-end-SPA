@@ -7,17 +7,25 @@ class PostsController {
 	}
 
 	getAllPosts() {
+		this.getAllPostsForTemplate('posts');
+	}
+
+	getAllPostsFooter() {
+		this.getAllPostsForTemplate('posts-footer');
+	}
+
+	getAllPostsForTemplate(templateName) {
 		console.log('get all posts');
 		this.dao.getAll()
 			.then((items) => {
 				console.log(items);
-				new Templates('posts')
+				new Templates(templateName)
 					.show('#posts', {
 						items, // : [items[0]]
 					});
 			}).catch((error) => {
 				console.log(error);
-			});
+			});		
 	}
 }
 
