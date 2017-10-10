@@ -83,7 +83,8 @@ padding-right: 10px;
 
 .wrapper-top {
 	background-color:#452917 ;
-	width: 1400px;	
+	width: 1400px;
+	
 }
 .inactive {
 	display: none;
@@ -368,11 +369,11 @@ a:hover {
 	text-transform: uppercase;
 	font-family: LeagueGothic;
 	font-size: 22px;
-	margin-right: 8px;
+	margin-right: 6px;
 }
 
 .mon-fr .work_hours {
-	margin-right: 8px;
+	margin-right: 6px;
 }
 /* SECTION3 */
 
