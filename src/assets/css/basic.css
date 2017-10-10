@@ -1,0 +1,68 @@
+@font-face {
+    font-family: Myriad;
+    src: url('../fonts/MyriadPro-Regular.otf');
+}
+	/* HEADER */
+
+	.title {
+		background: url('../images/top-bg.png');
+		height: 250px;
+		width: 1400px;
+	}
+	.wrapper-1 {
+		padding-left: 220px;
+		padding-top: 160px;
+		width: 960px;
+	}
+	.title h1{
+		color: white;
+		font-family: Myriad;
+		font-size: 48px;
+		text-transform: uppercase;
+	
+	}
+	.title h4{
+		color:#dacba7;
+		font-size: 14px;
+		font-weight: bold;
+	}
+	
+	.search-container {
+		background: url('../images/home/slogan-backgr.png') no-repeat bottom center ;
+		display: flex;
+		justify-content: space-around;
+		width: 1400px;
+	}
+	.search-container h2 {
+		color: #b4a48d;
+		font-size: 14px;
+		line-height: 70px;
+		padding-right: 120px;
+	}
+	.search-field {
+		display: flex;
+		justify-content: flex-end;
+		margin-top: 15px;
+	
+	}
+	.search {
+		background: url('../images/search.png') no-repeat center ;
+		color: #a1a0a0;
+		font-family: GeorgiaItalic;
+		font-size: 12px;
+		height: 37px;
+		margin-right: 5px;
+		padding-left: 15px;
+		padding-top: 12px;
+		width: 170px;
+	}
+	.button-search {
+		background: url('../images/search-button.png') no-repeat bottom center ;
+		color: white;
+		font-size: 16px;
+		height: 37px;
+		padding-top: 10px;
+		padding-left: 20px;
+		width: 85px;
+	}
+	
