@@ -28,9 +28,6 @@ gulp.task('copy', () => {
 
 gulp.task('build', ['lint'], () => {
 	gulp.start('copy');
-});
-
-gulp.task('full', ['build'], () => {
 	gulp.src('bootstrap/dist/css/bootstrap.css', { cwd: 'node_modules/' })
 		.pipe(gulp.dest('dist/assets/css/lib'));
 	gulp.src('bootstrap/dist/css/bootstrap-reboot.min.css',
@@ -46,13 +43,14 @@ gulp.task('full', ['build'], () => {
 		'systemjs-plugin-babel',
 		'sammy',
 		'handlebars',
+		'popper',
 	].forEach((name) => {
 		gulp.src(name + '/**', { cwd: 'node_modules/' })
 		.pipe(gulp.dest('dist/assets/js/lib/' + name));
 	});
 });
 
-gulp.task('connect', ['full'], () => {
+gulp.task('connect', ['build'], () => {
 	connect.server({
 		name: 'Dist App',
 		root: 'dist',
@@ -67,7 +65,7 @@ gulp.task('watch', ['connect'], () => {
 
 gulp.task('default', ['watch']);
 
-gulp.task('deploy', () => {
+gulp.task('deploy', ['build'], () => {
 	return firebaseTools.deploy({
 		project: 'mycuisine-6f6e4',
 		token: process.env.FIREBASE_TOKEN,

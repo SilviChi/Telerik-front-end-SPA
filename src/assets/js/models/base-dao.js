@@ -21,7 +21,9 @@ class BaseDAO {
 				.then(function(snapshot) {
 					const items = [];
 					snapshot.forEach(function(childSnapshot) {
-						items.push(childSnapshot.val());
+						const item = childSnapshot.val();
+						item.id = childSnapshot.key;
+						items.push(item);
 					});
 					resolve(items);
 				})

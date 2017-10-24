@@ -20,6 +20,30 @@ class MenusController {
 			console.log(error);
 		});
 	}
+
+	showMenu() {
+		this.dao.getAll()
+		.then((items) => {
+			const starter = items.filter((item) => {
+				return item.type === 'Starters';
+			});
+			console.log(starter);
+			const main = items.filter((item) => {
+				return item.type === 'Main';
+			});
+			const dessert = items.filter((item) => {
+				return item.type === 'Desserts';
+			});
+			new Templates('menu')
+				.show('.menu', {
+					starter,
+					main,
+					dessert,
+				});
+		}).catch((error) => {
+			console.log(error);
+		});
+	}
 }
 
 export default MenusController;

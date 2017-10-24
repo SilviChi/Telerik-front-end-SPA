@@ -5,11 +5,10 @@
 		{{#each items}}
 		<div class="item {{#if @first}}active{{else}}inactive{{/if}}">
 			<h1 class="title-post">{{this.title}}</h1>
-			<p>{{this.description}}
-			</p>
+			<p>{{this.description}}</p>
+			<a class="button readmore" href="#/posts/{{this.id}}"><span>Read more</span></a>
 		</div>
 		{{/each}}
-		<a class="button readmore" href="#"><span>Read more</span></a>
 	</div>
 
 

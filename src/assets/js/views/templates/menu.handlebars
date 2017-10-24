@@ -1,0 +1,58 @@
+<div class="starters">
+	<h2 class="title-font">starters</h2>
+	<div class="menu_items">
+		{{#starter}}
+		<div class="item">
+			<div class="thumb">
+				<div class="shadow">
+					<span class="price-tag">{{price}}</span>
+					<img src="{{img}}" class="item-image" width="56" height="56" data-id="">
+				</div>
+			</div>
+			<div class="item-descr">
+				<h4 class="title"><a href="#">{{title}}</a></h4>
+				<p>{{description}}</p>
+			</div>
+		</div>
+		{{/starter}}
+	</div>
+</div>
+<div class="main">
+	<h2 class="title-font">main dishes</h2>
+	<div class="menu_items">
+		{{#main}}
+		<div class="item">
+			<div class="thumb">
+				<div class="shadow">
+					<span class="price-tag">{{price}}</span>
+					<img src="{{img}}" class="item-image" width="56" height="56" data-id="">
+					
+				</div>
+			</div>
+			<div class="item-descr">
+				<h4 class="title"><a href="#">{{title}}</a></h4>
+				<p>{{description}}</p>
+			</div>
+		</div>
+		{{/main}}
+	</div>
+</div>
+<div class="desserts">
+	<h2 class="title-font">desserts</h2>
+	<div class="menu_items">
+		{{#dessert}}
+		<div class="item">
+			<div class="thumb">
+				<div class="shadow">
+					<span class="price-tag">{{price}}</span>
+					<img src="{{img}}" class="item-image" width="56" height="56" data-id="">
+				</div>
+			</div>
+			<div class="item-descr">
+				<h4 class="title"><a href="#">{{title}}</a></h4>
+				<p>{{description}}</p>
+			</div>
+		</div>
+		{{/dessert}}
+	</div>
+</div>

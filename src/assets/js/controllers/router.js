@@ -32,13 +32,17 @@ const router = (function() {
             });
             this.get('#/posts/:id', function() {
                 const id = this.params.id;
-                mainController.showMain('post').then(() => {
-                    postsController.showPost(id);
+                postsController.showPost(id).then(() => {
+                    postsController.getAllPostsAside();
+                    reviewsController.getRecentReviews();
+                    postsController.getAllPostsFooter();
                 });
             });
             this.get('#/menu', function() {
                 mainController.showMain('menu').then(() => {
-                    // menusController.showMenu();
+                    menusController.showMenu();
+                    reviewsController.getRecentReviews();
+                    postsController.getAllPostsFooter();
                 });
             });
             this.get('#/location', function() {

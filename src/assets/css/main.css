@@ -38,20 +38,17 @@ ol, ul {
     font-family: Goudy;
     src: url('../fonts/goudy_bookletter_1911.otf');
 }
-
 body {
-	background: url('../images/bg.png');
-	font-family: Georgia, serif;
+	background: url('../images/content-background.png');
 }
-
 /* Navigation */
 #nav {
-	width: 1180px;
-	left: 220px;
-	top: 25px;
 	background: #989180;
-	position: absolute;
+	left: 12%;
 	max-height: 65px;
+	position: absolute;
+	top: 25px;
+	width: 88%;
 }
 
 #nav ul#menu-nav{
@@ -76,15 +73,18 @@ padding-right: 10px;
 .navbar > li > a.nav-link{
 	color: white;
 }
+nav #navbarNav .dropdown-menu {
+	background-image: url('../images/header-bg.jpg');
+	border: none;
+	padding: 20px;
+	line-height: 25px;
+}
 
 /* Navigation End */
-
 /* Header */
 
 .wrapper-top {
 	background-color:#452917 ;
-	width: 1400px;
-	
 }
 .inactive {
 	display: none;
@@ -104,16 +104,22 @@ padding-right: 10px;
 
 .carousel-holder {
 	max-width: 960px;
-	margin-top: 120px;
-	margin-left: 220px;
+	margin: auto;
+	padding-top: 120px;
 	padding-left: 20px;
 }
 
 .slider {
 	max-width: 365px;
+	height: 235px;
+	overflow: hidden;
+}
+
+.slider .item {
 	display: flex;
 	flex-direction: column;
 }
+
 .slider h1.title-post {
 	font-size: 48px;
 	padding-bottom: 17px;
@@ -135,7 +141,7 @@ padding-right: 10px;
 .slider a.readmore {
 	width: 300px;
 	height: 35px;
-	padding-top: 8px;
+	padding-top: 10px;
 	background: url('../images/home/readmore-btn.png') no-repeat;
 	
 
@@ -162,13 +168,13 @@ padding-right: 10px;
 	padding-top: 70px;
 }
 
-.bottom-line {
+/* .bottom-line {
 	position:relative;
 	left: 75px;
 	bottom: 116px;
 	background: url('../images/home/carousel-bottom-line.png') no-repeat bottom center;
 	height: 3px;
-}
+} */
 input[type=radio] {
     display: none;
 }
@@ -209,7 +215,6 @@ input[type=radio]:checked + label:before {
 /* SLOGAN */
 
 .slogan {
-	width: 1400px;
 	background: url('../images/home/slogan-backgr.png') no-repeat bottom center ;
 	text-align: center;
 	display: flex;
@@ -251,8 +256,8 @@ input[type=radio]:checked + label:before {
 
 .featured {
 	max-width: 960px;
-	margin-top: 60px;
-	margin-left: 220px;
+	padding-top: 60px;
+	margin: auto;
 	margin-bottom: 80px;
 	display: flex;
 	flex-direction: row;
@@ -465,10 +470,10 @@ footer {
 	background: url('../images/home/footer.png') no-repeat ;
 	display: flex;
 	flex-direction: column;
-	width: 1400px;
+	padding-bottom: 45px;
 }
 
-footer .menu {
+footer .menu-nav {
 	display: flex;
 	margin: auto;
 	padding-top: 20px;
@@ -492,7 +497,7 @@ footer .symbol-logo {
 	margin-top: 15px;
 }
 
-.menu li a {
+.menu-nav li a {
 	color: #442917;
 	font-family: Georgia, serif;
 	font-size: 12px;
@@ -500,7 +505,7 @@ footer .symbol-logo {
 	margin-right: 15px;
 }
 
-.menu li a:hover {
+.menu-nav li a:hover {
 	color: #92907c;
 	font-family: GeorgiaItalic;
 

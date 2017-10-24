@@ -33,6 +33,18 @@ class ReviewsController {
 			console.log(error);
 		});
 	}
+
+	// getReviews() {
+	// 	this.dao.getAll()
+	// 	.then((reviews) => {
+	// 		new Templates('comments')
+	// 			.show('.comments', {
+	// 				reviews, // : [items[0]]
+	// 			});
+	// 	}).catch((error) => {
+	// 		console.log(error);
+	// 	});
+	// }
 }
 
 export default ReviewsController;

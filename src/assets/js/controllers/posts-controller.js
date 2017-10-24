@@ -15,17 +15,44 @@ class PostsController {
 	}
 
 	getAllPostsForTemplate(templateName) {
-		console.log('get all posts');
 		this.dao.getAll()
 			.then((items) => {
-				console.log(items);
 				new Templates(templateName)
 					.show('#posts', {
 						items, // : [items[0]]
 					});
 			}).catch((error) => {
 				console.log(error);
-			});		
+			});
+	}
+
+	getAllPostsAside() {
+		this.dao.getAll()
+			.then((items) => {
+				new Templates('posts-footer')
+					.show('.com-posts', {
+						items, // : [items[0]]
+					});
+			}).catch((error) => {
+				console.log(error);
+			});
+	}
+
+	showPost(id) {
+		return this.dao.getById(id)
+		.then((item) => {
+			return new Templates('basic')
+				.show('#main', {
+					title: item.title,
+					titleNav: item.title.toUpperCase(),
+				})
+				.then(() => {
+					return new Templates('post')
+					.show('.post', {
+						item,
+					});
+				});
+		});
 	}
 }
 

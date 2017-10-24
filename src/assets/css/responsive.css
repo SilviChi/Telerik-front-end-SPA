@@ -33,7 +33,9 @@
 	}
 
 	.slider {
+		height: 160px;
 		max-width: 360px;
+
 	}
 
 	.slider h1.title-post {
@@ -150,6 +152,3 @@
 	}
 }
 
-@media (max-width: 1280px) and (orientation: landscape){
-
-}
